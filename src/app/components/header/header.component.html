@@ -1,0 +1,17 @@
+<nav>
+  <ul>
+    <li
+      class="main-header__item"
+      *ngFor="let item of items"
+      (click)="currentPath = item.path"
+    >
+      {{ item.text }}
+    </li>
+  </ul>
+  <div *ngIf="currentPath.length > 0; else noCurrentPath">
+    {{ currentPath }}
+  </div>
+  <ng-template #noCurrentPath>
+    <div>No current path</div>
+  </ng-template>
+</nav>
