@@ -1,0 +1,60 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-top: 150px;
+  max-width: 600px;
+  width: 90%;
+}
+
+.header {
+  font-weight: normal;
+}
+
+.form {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.under-form {
+  margin-top: 15px;
+}
+
+.search-item {
+  list-style: none;
+  margin-top: 10px;
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.input-wrapper {
+  height: 50px;
+  display: flex;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 0px 1px black;
+  font-size: 1rem;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0 0 1px 1px rgb(29, 114, 240);
+  }
+}
+
+.btn-wrapper {
+  margin-left: 10px;
+}
+
+.found-users {
+  max-height: 250px;
+  overflow: auto;
+}

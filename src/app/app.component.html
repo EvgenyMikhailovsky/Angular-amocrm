@@ -1,3 +1,33 @@
-<div>
-
+<div class="app">
+  <h2 class="header">Поиск пользователей</h2>
+  <form class="form" (submit)="handleSearch($event)">
+    <div class="input-wrapper">
+      <input
+        class="input"
+        type="text"
+        required
+        (input)="handleInput($event)"
+        placeholder="Введите имя"
+      >
+      <div class="btn-wrapper">
+        <button>
+          Поиск
+        </button>
+      </div>
+    </div>
+  </form>
+  <div class="under-form">
+    <div class="found-users" *ngIf="foundUsers.length">
+      <ul>
+        <li class="search-item" *ngFor="let foundUser of foundUsers">
+          <p>Имя: {{ foundUser.name }}</p>
+          <p>Возраст: {{ foundUser.age }}</p>
+          <p>Кэш: {{ foundUser.cash }}</p>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="message.length">
+      {{ message }}
+    </div>
+  </div>
 </div>
